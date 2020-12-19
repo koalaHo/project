@@ -1,0 +1,1 @@
+"use strict";$("#login").on("click",function(){$.post("../api/login.php",{username:$("#username").val(),password:$("#password").val()},function(o){console.log(o),console.log(o.code),1==o.code&&(setCookie("login",$("#username").val()),(o=localStorage.getItem("url"))?(location.href=o,console.log(o),localStorage.removeItem("url")):location.href="../index.html")},"json")});

@@ -1,0 +1,162 @@
+@charset "utf-8";
+body{font-weight:400}
+body img{width:100%}
+.main-container{width:100%;min-height:calc(100vh - 320px);position:relative;overflow:hidden}
+.header{overflow:initial;background:#fff}
+.header[v-clock]{display:block;min-height: 150px;visibility: hidden;}
+.header-top{height:50px;border-bottom:1px solid #ccc;line-height:49px;overflow:initial}
+.header-topbar{padding-right:70px;font-size:14px;color:#999;overflow:initial}
+.header-topbar a{color:#999}
+.header-topbar a:hover{text-decoration:underline;color:#4e4e4e}
+.header-topbar>div{position:relative;display:inline-block;margin-right:30px;height:20px;line-height:20px;min-width:20px}
+.header-topbar>div.topbar-service,.header-topbar>div:last-child{margin-right:0}
+.header-topbar>div.topbar-help{height:50px;margin-top:0;line-height:50px}
+.header-topbar>div.topbar-cart{position:relative}
+.header-topbar>div.topbar-cart>i{display: none;}
+.header-topbar>div.topbar-cart.notempty>i {display:block;position: absolute;font-size: 11px;font-style: normal;color: #fff;background: #d00;height: 14px;line-height: 14px;padding: 0 4px;border-radius: 7px;top: -5px;right: -10px;}
+.header-topbar>div.topbar-cart.active:before{content:'';position:absolute;height:3px;width:40px;background:#111;bottom:-15px;left:-8px}
+.header-topbar .topbar-icon{height:100%;display:inline-block;width:100%;vertical-align:middle;background-repeat:no-repeat;background-size:20px auto;background-position:center center}
+.header-topbar .topbar-cart .topbar-icon{background-image:url(https://img.fishfay.com/theme/images/icons/cart-g.svg)}
+.header-topbar .topbar-cart .topbar-icon:hover,
+.header-topbar .topbar-cart.active .topbar-icon{background-image:url(https://img.fishfay.com/theme/images/icons/cart-b.svg)}
+.header-topbar .topbar-service .topbar-icon{background-image:url(https://img.fishfay.com/theme/images/icons/service-g.svg)}
+.header-topbar .topbar-service .topbar-icon:hover{background-image:url(https://img.fishfay.com/theme/images/icons/service-b.svg)}
+.top-help-list{position:absolute;display:none;width:140px;height:auto;background:#fff;border:1px solid #f8f8f8;border-top:2px solid #000;z-index:2;right:-5px;top:49px;padding:0 25px 10px}
+.topbar-help:hover .top-help-list{display:block}
+.top-help-list li{line-height:26px;margin-top:10px}
+.top-help-list li a{border-bottom:1px solid #f8f8f8;display:inline-block;line-height:26px;color:#999}
+.top-help-list li a:hover{text-decoration:none}
+.header-nav{position:relative;height:100px;border-bottom:1px solid #e6e6e6;line-height:99px;overflow:initial}
+.header-nav a:hover {text-decoration: none;}
+.header-logo{width:125px;height:100%}
+.logo-inner{width:53px;height:29px;line-height:1;display:inline-block;margin-top:34px;overflow:hidden;margin-left:36px}
+.nav-list{margin-right:70px;overflow:initial}
+.nav-item{display:inline-block;padding:0 25px;margin-left:-1px;height:98px;line-height:98px;vertical-align:middle}
+.nav-item.last,.nav-item:last-child{margin-right:0}
+.nav-item a,.nav-item a:hover{color:#000;font-size:17px;font-weight:600}
+.nav-item>a{position:relative;display:inline-block}
+.nav-item.current>a:before,
+.nav-item:hover>a:before,
+.nav-item.hover>a:before{content:'';position:absolute;height:4px;width:130%;bottom:0;left:-15%;background:#d00}
+.nav-search-box{margin-top:0;width:212px;height:40px;line-height:26px;border:1px solid #ccc;border-radius:5px;vertical-align:middle;display:inline-block;padding:6px 0}
+.nav-item .nav-search-btn{width:46px;height:26px;border-right:1px solid #ccc;display:inline-block;vertical-align:middle;background:url(https://img.fishfay.com/theme/images/icons/search-b.svg) no-repeat;background-size:18px 18px;background-position:center center}
+.nav-search-input{display:inline-block;border:0;height:26px;line-height:26px;width:160px;vertical-align:middle;color:#000;font-size:15px;text-indent:10px;outline:0}
+.sub-nav-panel{display:none;position:absolute;height:auto;background:#fff;z-index:3;overflow-y:auto;text-align:center;padding:30px 0 0;width:100%;left:0;top:100px;overflow-x:hidden}
+.nav-item:hover .sub-nav-panel,
+.nav-item.hover .sub-nav-panel{display:block}
+.sub-nav-inner{display:inline-block;line-height:30px;text-align:left}
+.sub-nav-item{float:left;border-left:1px solid #eee;min-height:310px;padding-left:30px}
+.sub-nav-item.first,.sub-nav-item:first-child{border-left:0}
+.sub-nav-item li{height:25px;line-height:25px}
+.sub-nav-item a,
+.sub-nav-item a:hover{display:inline-block;font-size:13px;font-weight:400;color:#333;max-width:100%;height:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cate-title a,
+.cate-title a:hover,
+.hot-title a,
+.hot-title a:hover{font-size:14px;font-weight:600;color:#000;line-height:20px;margin-bottom:5px;position:relative;overflow:initial}
+.sub-nav-item ul{width:130px;margin-right:20px}
+.sub-nav-item.sub-newtag ul{width:100px}
+.sub-nav-item.sub-newtag li{margin-bottom:3px;height:25px;line-height:25px}
+.sub-nav-item.sub-newtag li a{font-size:14px;position:relative;overflow:initial}
+.icon-new a:before{content:'NEW';position:absolute;color:#d00;right:-30px;top:-10px;font-size:10px;font-weight:400}
+.sub-nav-item.sub-hot{min-height:auto}
+.sub-nav-item.sub-hot ul{width:220px}
+.sub-nav-item.sub-hot ul>li>a, 
+.sub-nav-item.sub-hot ul>li>a:hover {display: block;}
+.hot-list li{height:auto;border-bottom:1px solid #f0f0f0;margin-bottom:20px;padding-bottom:10px}
+.hot-list li:last-child{border-bottom:0;margin-bottom: 0;}
+.hot-list li a,.hot-list li img,.hot-list li span{display:block}
+.hot-list img{width: auto;max-width: 100%;height: auto;}
+.hot-list li span{color:#999;line-height:40px;height:40px;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.minicart{position:absolute;z-index:101;top:50px;right:111px;width:420px;height:auto;padding:30px;background:#fff;border:1px solid #e0e0e0;display:none}
+.minicart-cover{position:absolute;width:100%;height:100%;top:0;left:0;background:#888;background:rgba(0,0,0,.6);z-index:100;display:none}
+.minicart-cover.active,.minicart.active{display:block}
+.minic-title,.minic-title a,.minic-title a:hover{line-height:22px;font-size:15px;color:#a5a5a5}
+.minic-title>h4{line-height:30px;font-size:20px;font-weight:600;color:#000;position:relative}
+.minic-title>h4:before{content:'';position:absolute;height:3px;width:45px;background:#000;top:-4px;left:0}
+.minic-title .minic-num{color:#666;margin:0 2px}
+.minic-list{margin-top:7px;max-height:265px;overflow:auto}
+.minic-item{border-top:1px solid #ccc;padding:10px 0}
+.minic-pic{width:80px;height:80px;position:relative}
+.minic-pic .minic-delete{position:absolute;height:80px;width:80px;top:0;left:0;line-height:80px;text-align:center;font-size:14px;color:#fff;background:#888;background:rgba(0,0,0,.5);display:none}
+.minic-pic:hover .minic-delete{display:block}
+.minic-goods{width:273px;padding:0 10px;overflow:hidden}
+.minic-goods-title{display:block;line-height:20px;font-size:14px;color:#666;margin-bottom:5px}
+.minic-goods p{line-height:20px;color:#a5a5a5;font-size:14px;margin-top:3px;cursor:default}
+.minic-goods .minic-mktprice{font-size:12px;text-decoration:line-through;line-height:17px}
+.minic-goods .minic-minprice{color:#ca4735}
+.minic-ft{border-top:1px solid #ccc}
+.minic-total{margin:20px 0;font-size:15px;line-height:22px;color:#666;text-indent:15px}
+.minic-total .minic-sum{font-size:16px;font-weight:500;color:#ca4735}
+.minic-ft .minic-btn{display:block;background:#000;height:50px;line-height:50px;color:#fff;text-align:center;font-size:18px}
+.minic-empty{border-top:1px solid #ccc;margin-top:5px;text-align:center;padding:50px 0;color:#666;font-size:13px;line-height:22px}
+.minic-empty img{height:60px;margin-bottom:20px;display:inline-block;width:auto}
+.minic-empty a{display:inline-block;height:30px;background:#111;line-height:30px;color:#fff;padding:0 20px;margin-top:5px}
+.news-inner .swiper-button-next,.news-inner .swiper-button-prev{background:0 0}
+.news-board{background:#f4f4f4;height:85px}
+.news-inner{height:85px}
+.news-inner .swiper-slide{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;position:relative;padding:0 220px}
+.news-item{line-height:20px;color:#666;font-size:12px;text-align:center}
+.news-btn{position:absolute;max-width:180px;overflow:hidden;left:1060px;top:30px;height:25px;line-height:25px;font-size:14px;color:#333}
+.news-inner .swiper-button-next:before,.news-inner .swiper-button-prev:before{border-color:#000}
+.footer{background:#000;color:#fff;overflow:hidden;padding-top:50px}
+.footer.footer-cn{background-color:#292929;height:265px}
+.footer.footer-com{background-color:#000;padding-top:50px;padding-bottom:50px}
+.footer a,.footer a:hover{color:#fff}
+.ft-slogan{width:250px;text-align:center;padding-top:20px}
+.footer-cn .ft-slogan{padding-top: 35px;}
+.ft-slogan img{width:auto}
+.ft-main{min-width:900px;max-width: 900px;}
+.server-list{display:inline-block;width:600px;vertical-align:middle;min-height:280px}
+.server-list>li{width:140px}
+.server-list>li>h4{height:17px;line-height:17px;text-align:center;font-size:16px;border-right:1px solid #fff}
+.server-list>li.last>h4,.server-list>li:last-child>h4{border-right:0}
+.server-list>li>a{display:block;font-size:14px;margin-top:15px;line-height:22px;padding-left:38px;font-weight:300}
+.custom-service{display:inline-block;ertical-align:middle;border-left:1px solid #fff;padding-left:90px;width: 450px;height: 100px;min-height: 100px;}
+.custom-service.first{border-left:0;}
+.custom-service>h4{font-size:16px;height:50px;line-height:50px;margin-top: 0;}
+.custom-service>h4.server-btn{cursor:pointer;margin-top: 0;}
+.custom-service .server-icon {display: inline-block;height: 30px;width: 30px;background: url(https://img.fishfay.com/theme/images/icons/service-w.svg) no-repeat;background-size: 100% auto;background-position: center;margin-left: 20px;vertical-align: middle;}
+.custom-service .server-tel{font-size:25px;display: inline-block;vertical-align: middle;margin-left: 20px;}
+.custom-service .weixin-code{display:block;width:90px;height:90px;margin-top:5px;background:url(https://img.fishfay.com/theme/images/antacn/qr-code.jpg) no-repeat;background-size:100% auto;background-position:center center}
+.ft-company{margin-top:50px;height:25px;line-height:25px;padding-left:32px;font-size:14px}
+.footer-cn .ft-company{margin-top: 40px;}
+.ft-company a,
+.ft-company span{margin-right:10px}
+.links-line li{display:inline-block;padding:0 15px;border-left:1px solid #fff;font-size:14px;height:16px;line-height:16px}
+.links-line li:first-child{border-left:0}
+.footer-com .ft-company{padding-left:15px;margin:15px 0 40px;height:23px;line-height:23px}
+/*.goto-top{z-index:999;position:fixed;height:48px;width:48px;right:50px;bottom:100px;background:#000 url(https://img.fishfay.com/theme/images/icons/to-top-w.svg) no-repeat;cursor:pointer;background-size:100% auto;background-position:center;border-radius:4px;overflow:hidden;display:none}*/
+.main-ft{width:100%;background:#d00;text-align:center;padding:50px 0}
+body[data-type=kids] .main-ft{background-color:#ed7700}
+.main-ft-inner{display:inline-block}
+.main-ft-title{height:34px;background:url(https://img.fishfay.com/theme/images/antacom/text-followus-w.svg) no-repeat;background-size:auto 100%;background-position:center center}
+.main-ft-inner p{color:#fff;font-size:20px;font-style:italic;line-height:40px;margin-top:5px}
+.main-ft-links{margin-top:10px}
+.main-ft-links li{display:inline-block}
+.main-ft-links li>a{display:inline-block;height:85px;width:85px;margin:0 15px;position:relative;background-repeat:no-repeat;background-size:80px auto;background-position:center center}
+.main-ft-links li.main-ft-weixin>a{background-image:url(https://img.fishfay.com/theme/images/icons/wechat-w.svg)}
+.main-ft-links li.main-ft-weibo>a{background-image:url(https://img.fishfay.com/theme/images/icons/weibo-w.svg)}
+.com-qr-code{display:none;position:absolute;width:180px;height:180px;z-index:100;right:-40px;bottom:100%;background:#fff}
+.com-qr-code:before{content:'';position:absolute;top:100%;left:50%;border-top:8px solid #fff;border-left:7px solid transparent;border-right:7px solid transparent;margin-left:-7px}
+a:hover .com-qr-code{display:block}
+body[data-type=kids] .main-ft{background-color:#ed7700}
+.main-ft-inner{display:inline-block}
+.main-ft-title{height:34px;background:url(https://img.fishfay.com/theme/images/antacom/text-followus-w.svg) no-repeat;background-size:auto 100%;background-position:center center}
+.main-ft-inner p{color:#fff;font-size:20px;font-style:italic;line-height:40px;margin-top:5px}
+.main-ft-links{margin-top:10px}
+.main-ft-links li{display:inline-block}
+.main-ft-links li>a{display:inline-block;height:85px;width:85px;margin:0 15px;position:relative;background-repeat:no-repeat;background-size:80px auto;background-position:center center}
+.main-ft-links li.main-ft-weixin>a{background-image:url(https://img.fishfay.com/theme/images/icons/wechat-w.svg)}
+.main-ft-links li.main-ft-weibo>a{background-image:url(https://img.fishfay.com/theme/images/icons/weibo-w.svg)}
+.com-qr-code{display:none;position:absolute;width:180px;height:180px;z-index:100;right:-40px;bottom:100%;background:#fff}
+.com-qr-code:before{content:'';position:absolute;top:100%;left:50%;border-top:8px solid #fff;border-left:7px solid transparent;border-right:7px solid transparent;margin-left:-7px}
+a:hover .com-qr-code{display:block}
+
+
+.web-covers {background: url(https://img.fishfay.com/theme/images/icons/web-cover.svg) no-repeat;background-size: 100% auto;background-position: center;z-index: 999;position: fixed;right: 50px;bottom: 60px;width: 60px;height: 275px;}
+.web-covers>div, 
+.web-covers>a {display: block;position: absolute;width: 100%;height: 33.33%;right: initial;bottom: initial;left: 0;cursor: pointer;}
+.web-covers>.cover-top {top: 0;}
+.web-covers>.cover-cart {top: 33.33%;}
+.web-covers>.cover-kefu {top: 66.66%;}
